@@ -1,0 +1,41 @@
+
+spring:
+  application:
+   name: Auth-Service
+   
+   config:
+    import:optinal:configserver:http://localhost:2222
+      
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:1111/
+#    config:
+#     import:optinal:configserver:http://localhost:222
+   
+#  datasource:
+#    username: root
+#    password: haritha123
+#    url: jdbc:mysql://localhost:3306/ashokit_ecomm
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#
+#server:
+# port: 8081
+#
+## Application messages goes here
+#auth-service:
+# messages: 
+#  userReg: User Created
+#  userRegErr: User Creation Failed
+#  login: Login Success
+#  loginErr: Invalid Credentials  
