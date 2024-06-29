@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ashokitschool/configuration_properties
+          uri: https://github.com/haritha662244/configuration_properties
           clone-on-start: true
     
 server:

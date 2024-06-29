@@ -1,18 +1,25 @@
 
 spring:
+  application:
+    name: 09-Payment-Service
+  config:
+    import: optional:configserver:http://localhost:2222
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: haritha123
+    url: jdbc:mysql://localhost:3306/ashokit_ecomm
+  jpa:
+    hibernate:
+      ddl-auto: update
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
   boot:
     admin:
       client:
         url: http://localhost:1111/
-  datasource:
-    username: root
-    password: haritha123
-    url: jdbc:mysql://localhost:3306/Ashokit_ecomm
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
     
 management:
   endpoints:
@@ -21,7 +28,7 @@ management:
         include: '*'
 
 server:
- port: 8087
+ port: 8086
 
 # Application Messages Goes Here
 payment-service:

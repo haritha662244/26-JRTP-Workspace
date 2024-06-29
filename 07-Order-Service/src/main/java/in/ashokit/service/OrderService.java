@@ -14,7 +14,7 @@ public interface OrderService {
 	
 	public List<ProductOrderDto> getOrdersByUserId(Integer userId);
 	
-	public List<ProductOrderDto> getOrdersByDateAndStatus(LocalDate orderDate,
+	public List<ProductOrderDto> getOrdersByDateAndStatus(String orderDate,
 			String orderStatus);
 	
 	public List<ProductOrderDto> getAllOrders();

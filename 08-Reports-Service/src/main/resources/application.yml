@@ -1,17 +1,20 @@
 
 spring:
-  boot:
-    admin:
-      client:
-        url: http://localhost:1111/
+  application:
+    name: 08-Reports-Service
+  config:
+    import: optional:configserver:http://localhost:2222
   datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: haritha123
-    url: jdbc:mysql://localhost:3306/Ashokit_ecomm
-
+    url: jdbc:mysql://localhost:3306/ashokit_ecomm
   jpa:
     hibernate:
       ddl-auto: update
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.MySQLDialect
     show-sql: true
     
 management:
@@ -21,7 +24,7 @@ management:
         include: '*'
 
 server:
- port: 8086
+ port: 8085
 
 # Application Messages Goes Here
 reports-service:
